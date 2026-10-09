@@ -103,7 +103,7 @@ certbot logs	cat /var/log/letsencrypt/letsencrypt.log
 ```markdown
 ### Hi I am jackh0006
 
-Creator of x-ui Fronting Panel PRO
+Creator of X-UI Fronting Panel PRO
 
 https://github.com/jackh0006/x-ui-fronting-pro
 

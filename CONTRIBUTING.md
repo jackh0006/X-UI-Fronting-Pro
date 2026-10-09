@@ -1,4 +1,4 @@
-# Contributing to x-ui Fronting Panel PRO
+# Contributing to X-UI Fronting Panel PRO
 
 Thank you for your interest in contributing.
 
