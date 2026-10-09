@@ -103,11 +103,11 @@ certbot logs	cat /var/log/letsencrypt/letsencrypt.log
 ```markdown
 ### Hi I am jackh0006
 
-Creator of x-ui Fronting Panel PRO
+Creator of X-UI Fronting Panel PRO
 
 https://github.com/jackh0006/x-ui-fronting-pro
 
-The most advanced HAProxy SNI fronting control panel for 3x-ui.
+An advanced HAProxy SNI fronting control panel for 3x-ui.
 Multi-domain routing on a single port with encrypted backup and full VPS migration.
 
 - Open source developer

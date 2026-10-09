@@ -20,7 +20,7 @@
 
 # X-UI Fronting Panel PRO
 
-**The most advanced HAProxy SNI fronting control panel for 3x-ui**
+**An advanced HAProxy SNI fronting control panel for 3x-ui**
 
 *Menu-driven • Non-destructive • Encrypted Backups • Full Migration Support*
 
@@ -55,7 +55,7 @@
 
 ## What is This
 
-x-ui Fronting Panel PRO is a powerful menu-driven Bash control panel that sits in front of [3x-ui](https://github.com/MHSanaei/3x-ui) and adds:
+X-UI Fronting Panel PRO is a powerful menu-driven Bash control panel that sits in front of [3x-ui](https://github.com/MHSanaei/3x-ui) and adds:
 
 - SNI-based TCP routing — multiple domains through a single port 443
 - TLS passthrough — traffic is never decrypted at the proxy layer
@@ -100,7 +100,7 @@ Traffic is NEVER decrypted. Full end-to-end TLS preserved.
 
 ## vs 3x-ui Comparison
 
-| Feature | 3x-ui | x-ui Fronting PRO |
+| Feature | 3x-ui | X-UI Fronting PRO |
 |---|---|---|
 | Core VPN and proxy panel | YES | NO - complements it |
 | Multi-domain on single port | NO | YES |
@@ -122,7 +122,9 @@ Traffic is NEVER decrypted. Full end-to-end TLS preserved.
 | Audit log | NO | YES |
 | Open source | YES | YES |
 
-3x-ui is the VPN and proxy engine. x-ui Fronting PRO is the intelligent router in front of it. They work together. This tool makes 3x-ui production-ready with enterprise-grade routing and migration.
+3x-ui is the VPN and proxy engine. X-UI Fronting PRO is the intelligent router in front of it. They work together. This tool makes 3x-ui production-ready with enterprise routing and migration.
+
+> 🕵️ Honest limits: fronting hides intent from local networks, not activity from the provider. Backups are AES-256 only with a strong passphrase you choose. Proof pointers: `install.sh` integrity gate, `docs/cert-management.md`, `docs/dns-guide.md`. No hype — see `SECURITY.md`.
 
 ---
 
@@ -193,7 +195,7 @@ Always run as root. The panel requires root to manage HAProxy certificates and f
 Menu Overview
 
 +------------------------------------------------------+
-|    x-ui Fronting Panel PRO   [status: active]        |
+|    X-UI Fronting Panel PRO   [status: active]        |
 +------------------------------------------------------+
 |  1   Install full                                    |
 |  2   Uninstall panel blocks                          |
