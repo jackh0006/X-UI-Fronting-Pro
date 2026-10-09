@@ -43,6 +43,9 @@ printf "  Downloading main script...\n"
 curl -fsSL "${RAW_BASE}/${SCRIPT_NAME}" -o "${INSTALL_PATH}" || \
   wget -qO "${INSTALL_PATH}" "${RAW_BASE}/${SCRIPT_NAME}" || \
   fail "Download failed. Check your internet connection."
+# Fail closed: never execute a missing/empty/unexpected payload.
+[[ -s "${INSTALL_PATH}" ]] || fail "Downloaded script is empty — aborting, nothing was executed."
+grep -q "Fronting" "${INSTALL_PATH}" || fail "Downloaded script failed integrity check (marker missing) — aborting, nothing was executed."
 
 chmod +x "${INSTALL_PATH}"
 ok "Installed to ${INSTALL_PATH}"

@@ -5,25 +5,41 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Create archive
+      - name: Shell syntax
+        run: bash -n install.sh
+
+      - name: Create archive (only files that exist in this tag)
         run: |
           VERSION="${GITHUB_REF#refs/tags/}"
-          tar -czf "x-ui-fronting-pro-${VERSION}.tar.gz" \
-            xui-fronting-pro.sh install.sh README.md LICENSE CHANGELOG.md docs/
+          VER="${VERSION#v}"
+          FILES="install.sh README.md LICENSE CHANGELOG.md docs/"
+          tar -czf "x-ui-fronting-pro-$VER-linux-all.tar.gz" $FILES
+          sha256sum "x-ui-fronting-pro-$VER-linux-all.tar.gz" > "x-ui-fronting-pro-$VER-SHA256SUMS.txt"
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
-          files: "*.tar.gz"
+          files: |
+            x-ui-fronting-pro-*-linux-all.tar.gz
+            x-ui-fronting-pro-*-SHA256SUMS.txt
           generate_release_notes: true
           body: |
             ## x-ui Fronting Panel PRO
+
+            > ⚠️ The `install.sh` bootstrapper fetches its main script from
+            > `main`. Verify the script exists before running on a server.
 
             Quick Install:
             ```bash

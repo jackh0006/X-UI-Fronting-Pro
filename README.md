@@ -20,7 +20,7 @@
 
 # X-UI Fronting Panel PRO
 
-**The most advanced HAProxy SNI fronting control panel for 3x-ui**
+**An advanced HAProxy SNI fronting control panel for 3x-ui**
 
 *Menu-driven • Non-destructive • Encrypted Backups • Full Migration Support*
 
@@ -122,7 +122,9 @@ Traffic is NEVER decrypted. Full end-to-end TLS preserved.
 | Audit log | NO | YES |
 | Open source | YES | YES |
 
-3x-ui is the VPN and proxy engine. x-ui Fronting PRO is the intelligent router in front of it. They work together. This tool makes 3x-ui production-ready with enterprise-grade routing and migration.
+3x-ui is the VPN and proxy engine. x-ui Fronting PRO is the intelligent router in front of it. They work together. This tool makes 3x-ui production-ready with enterprise routing and migration.
+
+> 🕵️ Honest limits: fronting hides intent from local networks, not activity from the provider. Backups are AES-256 only with a strong passphrase you choose. Proof pointers: `install.sh` integrity gate, `docs/cert-management.md`, `docs/dns-guide.md`. No hype — see `SECURITY.md`.
 
 ---
 
